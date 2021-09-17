@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <script src="https://kit.fontawesome.com/16e199c24d.js" crossorigin="anonymous"></script>
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Form</title>
+</head>
+<body class="grey darken-4">
+    <div class="container">
+        <h1 class="grey-text text lighten-4">Forms</h1>
+        <form>
+          <div class="input-field">
+            <input type="text" id="name">
+            <label for="name">Name</label>
+          </div>
+          <!-- Value & Disable -->
+          <div class="input-field">
+            <input type="text" id="email" placeholder="Email">
+        </div><br>
+          <div class="input-field">
+            <input type="email" id="email" type="email" disabled value="test123@gmail.com">
+            <label for="email">Email</label>
+          </div>
+          <!-- Text Area -->
+          <div class="input-field">
+            <textarea name="" id="message" class="materialize-textarea"></textarea>
+            <label for="message">Message</label>
+          </div>
+          <!-- Inline Field -->
+          <div class="input-field inline">
+            <input type="text" id="users">
+            <label for="">#</label>
+          </div>
+          <!--Icon Prefix-->
+          <div class="input-field">
+            <i class="material-icons prefix">phone</i>
+            <input type="text" id="phone">
+            <label for="phone">Phone Number</label>
+          </div>
+          <!-- Validation Error -->
+          <div class="input-field">
+            <input type="email" id="email" class="validate" placeholder="Email">
+            <label for="email">Email</label>
+            <span class="helper-text" data-error="Invalid" data-success="Valid">
+            </span>
+          </div>
+          <!--Select  -->
+          <div class="input-field">
+            <select>
+              <option value="" disabled selected>Select Option</option>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+            <label>Select List</label>
+          </div>
+          <br><br>
+          <div class="input-field">
+            <select multiple>
+              <option value="" disabled selected>Select Option</option>
+              <option value="1">Good</option>
+              <option value="2">Better</option>
+              <option value="3">Best</option>
+            </select>
+            <label>Select List</label>
+          </div>
+          <br><br>
+          <!-- Option Group-->
+          <div class="input-field">
+            <select>
+              <optgroup label="Option Group 1">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+              </optgroup>
+              <optgroup label="Option Group 2">
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+              </optgroup>
+            </select>
+            <label>Option Group Select</label>
+          </div>
+          <br><br>
+          <!--Radio Buttons-->
+          <p>
+            <label>
+              <input type="radio" id="Gender" id="male" checked>
+              <span>Male</span>
+            </label>
+            <label>
+              <input type="radio" id="Gender" id="female" class="with-gap">
+              <span>Female</span>
+            </label>
+            <label>
+              <input type="radio" id="Gender" id="male">
+              <span>Male</span>
+            </label>
+          </p>
+        </form>
+        <br></br>
+        <!-- End -->
+        <form>
+          <p>
+            <label>
+              <input type="checkbox">
+              <span>Red</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked">
+              <span>Yellow</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" class="filled-in" checked="checked">
+              <span>Filled in</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input id="indeterminate-checkbox" type="checkbox">
+              <span>Indeterminate Style</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" checked="checked" disabled="disabled">
+              <span>Green</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" disabled="disabled">
+              <span>Brown</span>
+            </label>
+          </p>
+        </form>
+      </div>
+    
+      <div style="height:100px"></div>
+    
+      <!-- Jquery CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('select').formSelect();
+        });
+      </script>
+</body>
+</html>

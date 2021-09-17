@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <script src="https://kit.fontawesome.com/16e199c24d.js" crossorigin="anonymous"></script>
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Collapsible</title>
+</head>
+<body class="blue darken-4">
+    <div class="container">
+        
+        <!-- Collapsible -->
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">group_work</i>
+            </div>
+            <div class="collapsible-body">
+              <span>This is the first area</span>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">help</i>
+            </div>
+            <div class="collapsible-body">
+              <span>This is the second area</span>
+            </div>
+          </li>
+          <li class="active">
+            <div class="collapsible-header">
+              <i class="material-icons">add</i>
+            </div>
+            <div class="collapsible-body">
+              <span>This is the third area</span>
+            </div>
+          </li>
+        </ul>
+      
+
+        <!-- Expandable -->
+        <ul class="collapsible expandable">
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">group_work</i>
+            </div>
+            <div class="collapsible-body">
+              <span>This is the first area</span>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">help</i>
+            </div>
+            <div class="collapsible-body">
+              <span>This is the second area</span>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">add</i>
+            </div>
+            <div class="collapsible-body">
+              <span>This is the third area</span>
+            </div>
+          </li>
+        </ul>
+       
+
+        <!-- PopOut -->
+        <ul class="collapsible popout">
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">group_work</i>
+            </div>
+            <div class="collapsible-body">
+              <span>This is the first area</span>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">help</i>
+            </div>
+            <div class="collapsible-body">
+              <span>This is the second area</span>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <i class="material-icons">add</i>
+            </div>
+            <div class="collapsible-body">
+              <span>This is the third area</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    
+    
+      <!-- Jquery CDN -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $('.collapsible').collapsible();
+      });
+      </script>
+      <script>
+        $(document).ready(function(){
+          $('.collapsible.expandable').collapsible({
+            accordion: false
+          });
+      });
+      </script>
+      <script>
+        $(document).ready(function(){
+          $('.collapsible.popout').collapsible({
+            accordion: true
+          });
+      });
+      </script>
+</body>
+</html>
